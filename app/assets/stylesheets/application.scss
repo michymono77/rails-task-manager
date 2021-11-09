@@ -1,0 +1,13 @@
+@import "bootstrap/scss/bootstrap";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
+
+li{
+  list-style-type: none;
+}
+
+.container {
+  width: 300px;
+  margin: 0px auto;
+}

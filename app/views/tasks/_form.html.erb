@@ -1,0 +1,27 @@
+<% if @task.errors.any? %>
+  <ul>
+    <% @task.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+<div class= "container">
+<%= form_for(@task) do |f| %>
+  <div class="form-group">
+    <%= f.label :title %>
+    <%= f.text_field :title, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :details %>
+    <%= f.text_area :details, class: 'form-control' %>
+  </div>
+    <div class="form-group">
+    <%= f.label :completed %>
+    <%= f.check_box :completed, class: 'form-control' %>
+  </div>
+  <div class="form-group mt-1">
+    <%= f.submit class: 'btn btn-primary' %>
+  </div>
+<% end %>
+</div>
